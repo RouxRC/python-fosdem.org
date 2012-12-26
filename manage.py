@@ -12,10 +12,18 @@
 from flask.ext.script import Manager
 from pythonfosdem import create_app
 from pythonfosdem.extensions import db
+from pythonfosdem.extensions import evolution
 from pythonfosdem.models import user_datastore
 
 def main():
     manager = Manager(create_app)
+
+    @manager.command
+    def migrate(action):
+        """
+        Make the migration of the schema
+        """
+        evolution.manager(action)
 
     @manager.command
     def db_populate():

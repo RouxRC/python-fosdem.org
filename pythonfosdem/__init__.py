@@ -14,6 +14,7 @@ from pythonfosdem.extensions import bootstrap
 from pythonfosdem.extensions import db
 from pythonfosdem.extensions import mail
 from pythonfosdem.extensions import security
+from pythonfosdem.extensions import evolution
 
 from pythonfosdem.models import user_datastore
 
@@ -46,6 +47,7 @@ class App(Flask):
         mail.init_app(self)
         db.init_app(self)
         security.init_app(self, user_datastore)
+        evolution.init_app(self)
 
     def configure_error_handlers(self):
         @self.errorhandler(404)

@@ -1,10 +1,11 @@
 Flask
 Flask-Babel
 Flask-Bootstrap
+Flask-Evolution
 Flask-Mail
+Flask-SQLAlchemy
 Flask-Script
 Flask-Security
-Flask-SQLAlchemy
 Flask-Uploads
 Flask-WTF
 gunicorn
